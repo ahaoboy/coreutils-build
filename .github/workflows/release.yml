@@ -61,6 +61,7 @@ jobs:
           RUSTFLAGS: ${{ matrix.RUSTFLAGS }}
           tag: nightly
           # upload_artifact: false
+          allowUpdates: true
 
       # - name: upload
       #   run: |
