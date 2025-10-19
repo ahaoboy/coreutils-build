@@ -48,6 +48,7 @@ jobs:
           - target: aarch64-linux-android
             os: ubuntu-latest
     runs-on: ${{ matrix.os }}
+    name: ${{ matrix.bin }}-${{ matrix.target }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -74,7 +75,7 @@ jobs:
           tag: nightly
           # upload_artifact: false
           allowUpdates: true
-          features: "feat_Tier1"
+          # features: "feat_Tier1"
 
       # - name: upload
       #   run: |
