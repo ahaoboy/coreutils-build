@@ -55,7 +55,7 @@ jobs:
           # package: uu_${{ matrix.bin }}
           # bin: coreutils
           bin: mktemp
-          package: uu_ mktemp
+          package: uu_mktemp
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           target: ${{ matrix.target }}
           RUSTFLAGS: ${{ matrix.RUSTFLAGS }}
