@@ -41,6 +41,11 @@ jobs:
       - uses: actions/checkout@v4
         with:
           repository: "uutils/coreutils"
+      - name: install libselinux1
+        if: startsWith(matrix.os, 'ubuntu')
+        run: |
+          sudo apt update -y
+          sudo apt install libselinux1-dev -y
       - name: run cross-build
         uses: ahaoboy/cross-build@v1
         with:
