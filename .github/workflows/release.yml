@@ -53,14 +53,15 @@ jobs:
           # bin: coreutils,base32,base64,basename,basenc,cat,cksum,comm,cp,csplit,cut,date,dd,df,dir,dircolors,dirname,du,echo,env,expand,expr,factor,false,fmt,fold,hashsum,head,join,link,ln,ls,mkdir,mktemp,more,mv,nl,numfmt,od,paste,pr,printenv,printf,ptx,pwd,readlink,realpath,rm,rmdir,seq,shred,shuf,sleep,sort,split,sum,tac,tail,tee,test,touch,tr,true,truncate,tsort,unexpand,uniq,unlink,vdir,wc,yes
           # bin: ${{ matrix.bin }}
           # package: uu_${{ matrix.bin }}
-          bin: coreutils
+          # bin: coreutils
+          bin: mktemp
+          package: uu_ mktemp
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           target: ${{ matrix.target }}
           RUSTFLAGS: ${{ matrix.RUSTFLAGS }}
           upload_artifact: false
-          archive: "$bin-$target"
-      - name: upload
-        run: |
-          ls -lh target/${{ matrix.target }}/release/
-          cargo build --workspace --release --target ${{ matrix.target }}
-          ls -lh target/${{ matrix.target }}/release/
+      # - name: upload
+      #   run: |
+      #     ls -lh target/${{ matrix.target }}/release/
+      #     cargo build --workspace --release --target ${{ matrix.target }}
+      #     ls -lh target/${{ matrix.target }}/release/
