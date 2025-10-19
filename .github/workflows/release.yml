@@ -52,6 +52,7 @@ jobs:
           target: ${{ matrix.target }}
           RUSTFLAGS: ${{ matrix.RUSTFLAGS }}
           upload_artifact: false
+          archive: "$bin-$target"
       - name: upload
         run: |
           ls -lh target/${{ matrix.target }}/release/
