@@ -59,7 +59,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           target: ${{ matrix.target }}
           RUSTFLAGS: ${{ matrix.RUSTFLAGS }}
-          upload_artifact: false
+          tag: nightly
+          # upload_artifact: false
+
       # - name: upload
       #   run: |
       #     ls -lh target/${{ matrix.target }}/release/
