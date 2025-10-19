@@ -39,7 +39,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          repository: 'uutils/coreutils'
+          repository: "uutils/coreutils"
       - name: run cross-build
         uses: ahaoboy/cross-build@v1
         with:
@@ -51,3 +51,4 @@ jobs:
           tag: nightly
           allowUpdates: true
           archive: "coreutils-${{ matrix.target }}"
+          features: "feat_common_core"
