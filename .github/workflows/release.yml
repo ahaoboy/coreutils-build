@@ -76,6 +76,7 @@ jobs:
           # RUSTFLAGS: ${{ matrix.RUSTFLAGS }}
           RUSTFLAGS: "-C opt-level=3 -C strip=symbols -C codegen-units=1 -C debuginfo=0"
           tag: nightly
+          profile: release-small
           # upload_artifact: false
           allowUpdates: true
           # features: "feat_Tier1"
