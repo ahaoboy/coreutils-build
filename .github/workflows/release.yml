@@ -74,7 +74,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           target: ${{ matrix.target }}
           # RUSTFLAGS: ${{ matrix.RUSTFLAGS }}
-          RUSTFLAGS: "-C opt-level=3 -C lto=yes -C strip=symbols -C codegen-units=1 -C debuginfo=0"
+          RUSTFLAGS: "-C opt-level=3 -C strip=symbols -C codegen-units=1 -C debuginfo=0"
           tag: nightly
           # upload_artifact: false
           allowUpdates: true
