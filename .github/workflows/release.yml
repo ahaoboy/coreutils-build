@@ -86,9 +86,3 @@ jobs:
           # upload_artifact: false
           allowUpdates: true
           # features: "feat_Tier1"
-
-      # - name: upload
-      #   run: |
-      #     ls -lh target/${{ matrix.target }}/release/
-      #     cargo build --workspace --release --target ${{ matrix.target }}
-      #     ls -lh target/${{ matrix.target }}/release/
